@@ -2,13 +2,13 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-  	sass: {
+    sass: {
       options: {
         sourceMap: true
       },
       dist: {
         files: {
-          'css/style.css': 'sass/style.sass'
+          'css/style.css': 'scss/style.scss'
         }
       }
     },
@@ -19,31 +19,32 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'images/',
             src: ['**/*.{png,jpg,gif}'],
-            dest: 'images/build/'
+            dest: 'images/build'
         	}]
     	}
-	},
+	   },
 
-	watch: {
-    scripts: {
-        files: ['sass/*.sass', './*.html'],
-        tasks: ['sass'],
-        options: {
+	   watch: {
+        scripts: {
+          files: ['scss/*.scss', './*.html'],
+          tasks: ['sass'],
+          options: {
             spawn: false,
+            livereload: true
         	},
     	}
-	},
+	   },
 
-	browserSync: {
-	    bsFiles: {
+	   browserSync: {
+	       bsFiles: {
 	        src : 'css/*.css'
-	    },
-	    options: {
-          watchTask: true,
-	        server: {
+	         },
+	       options: {
+            watchTask: true,
+	       server: {
 	            baseDir: "./"
 	        },
-          plugins: [
+         plugins: [
                       {
                         module: "bs-html-injector",
                         options: {
@@ -61,5 +62,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
   // Default task(s).
-  grunt.registerTask('default', ['browserSync', 'watch', 'sass', 'imagemin']);
+  grunt.registerTask('default', ['imagemin', 'sass','browserSync', 'watch']);
 };

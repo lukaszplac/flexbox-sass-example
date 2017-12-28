@@ -1,10 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lukasz</title>
+	<title>Flexbox template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<h1>This is Web Page</h1>
+
+	<!-- 7 x div container -->
+	<!-- JUMBOTRON -->
+	<div class="my-jumbotron">
+		<div class="my-navbar">
+			<ul>
+					<li>home</li>
+					<li>photoapp</li>
+					<li><i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i></li>
+					<li>design</li>
+					<li>download</li>
+			</ul>
+		</div>
+		<div class="my-inside-content">
+			<h1>your life, a photo</h1>
+			<h5>print your life in a single photo</h5>
+			<button type="button" class="btn btn-info my-jumbo-button">get started</button>
+		</div>
+		<div class="my-contacts">
+			<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+			<i class="fa fa-flickr fa-2x" aria-hidden="true"></i>
+			<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+		</div>
+	</div>
+
+	<!-- SECTION2 -->
+	<div class="my-section2">
+		<div class="my-section2-text">
+			<h5>present your life with a siple photo</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<button type="button" class="btn btn-info my-jumbo-button">get started</button>
+		</div>
+		<div class="my-section2-img">
+			<img src="./images/build/carousel_3.jpg" alt="Picture mobile"/>
+		</div>
+	</div>
+
+	<!-- SECTION3 -->
+	<div class=" my-section3">
+		<div class="my-section3-img">
+				<img src="./images/build/carousel_5.jpg" alt="Picture mobile">
+		</div>
+		<div class="carousel slide my-section3-text" id="carousel-section3" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<h5>design #1</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<button type="button" class="btn btn-info my-jumbo-button">learn more</button>
+					<p class="counter">01/05</p>
+				</div>
+				<div class="carousel-item">
+					<h5>design #2</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<button type="button" class="btn btn-info my-jumbo-button">learn more</button>
+					<p class="counter">02/05</p>
+				</div>
+				<div class="carousel-item">
+					<h5>design #3</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<button type="button" class="btn btn-info my-jumbo-button">learn more</button>
+					<p class="counter">03/05</p>
+				</div>
+				<div class="carousel-item">
+					<h5>design #4</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<button type="button" class="btn btn-info my-jumbo-button">learn more</button>
+					<p class="counter">04/05</p>
+				</div>
+				<div class="carousel-item">
+					<h5>design #5</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<button type="button" class="btn btn-info my-jumbo-button">learn more</button>
+					<p class="counter">05/05</p>
+				</div>
+			</div>
+			<div class="my-controls">
+				<a class="carousel-control-prev my-control" href="#carousel-section3" role="button" data-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next my-control" href="#carousel-section3" role="button" data-slide="next">
+					<i class="fa fa-chevron-right"></i>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

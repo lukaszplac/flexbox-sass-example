@@ -1,0 +1,148 @@
+@import '../helpers/animation.scss';
+@import '../helpers/flex-mixin.scss';
+@import url('https://fonts.googleapis.com/css?family=Prompt:200,300,400');
+$main-color: rgb(22, 160, 133);
+$main-color-hover: rgb(10, 107, 87);
+$small-dev: 576px;
+
+>* {
+	box-sizing: border-box; //include border and padding in total width and height of the all elements
+}
+
+body {
+	font-family: 'Prompt', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	@include flexbox();
+	@include flex-direction(column); //column flow
+	@include align-items(stretch); //items inside are stretched to fit the container
+	@include justify-content(flex-start); //The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis
+	@include align-content(flex-start); //The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
+	.my-jumbotron {
+		@include flex(0 0 100%);
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(center);
+		@include justify-content(center);
+		@include align-content(center);
+		background: url('../images/build/jumbo.jpg') no-repeat center center;
+		background-size: cover;
+		height: 100vh;
+		color: white;
+		>.my-navbar {
+			@include flex(0 1 auto);
+			ul {
+				li {
+					display: inline-block;
+					padding: 20px 30px;
+				}
+			}
+		}
+		>.my-inside-content {
+			@include flex(1 0 auto);
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			@include justify-content(center);
+			@include align-content(center);
+			h1, h4, button {
+				margin: 10px 0;
+			}
+			h5 {
+				text-transform: lowercase;
+			}
+		}
+		>.my-contacts {
+			@include flex(0 1 auto);
+			i {
+				padding: 20px 15px;
+			}
+		}
+		>.my-contacts>i, >.my-navbar>ul>li {
+			&:hover {
+				color: $main-color-hover;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.my-section2, .my-section3 {
+		@include flex(0 0 100%);
+		@include flexbox();
+		@include flex-direction(row);
+		@include align-items(flex-start);
+		@include justify-content(center);
+		@include align-content(center);
+		@include flex-wrap(wrap);
+		margin: 60px 0;
+		.my-section3-text {
+			padding-left: 40px;
+			@media screen and (max-width: $small-dev) {
+				padding-left: 0px;
+			}
+		}
+		.my-section2-text, .my-section3-text {
+			@include flex(0 0 40%);
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(flex-start);
+			@include justify-content(center);
+			@include align-content(center);
+			@media screen and (max-width: $small-dev) {
+				@include flex(0 0 90%);
+			}
+			h5 {
+				color: $main-color;
+			}
+			p {
+				color: black;
+				text-transform: lowercase;
+				font-weight: 100;
+				padding: 20px 30px 20px 0;
+			}
+			p.counter {
+				padding: 20px 0 0 0;
+				margin: 0;
+			}
+			.my-controls {
+				>a.my-control {
+					display: inline;
+					padding-right: 10px;
+					color: black;
+					opacity: 1;
+					background-color: white;
+					position: initial;
+				}
+			}
+		}
+		.my-section2-img, .my-section3-img {
+			@include flex(0 0 40%);
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(center);
+			@include justify-content(center);
+			@include align-content(center);
+			@media screen and (max-width: $small-dev) {
+				display: none;
+			}
+			img {
+				width: 100%;
+				height: auto;
+				max-height: 350px;
+			}
+		}
+	}
+}
+
+.my-jumbo-button {
+	text-transform: uppercase;
+	padding: 15px 40px;
+	background-color: $main-color;
+	border: none;
+	border-radius: 0;
+	&:hover {
+		background-color: $main-color-hover;
+		cursor: pointer;
+	}
+}
