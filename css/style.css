@@ -29,7 +29,7 @@ body {
   -moz-align-content: flex-start;
   -ms-align-content: flex-start;
   align-content: flex-start; }
-  body .my-jumbotron {
+  body .my-jumbotron, body .my-section5-jumbo {
     -webkit-box-flex: 0 0 100%;
     -moz-box-flex: 0 0 100%;
     -webkit-flex: 0 0 100%;
@@ -61,16 +61,25 @@ body {
     background-size: cover;
     height: 100vh;
     color: white; }
-    body .my-jumbotron > .my-navbar {
+    body .my-jumbotron > .my-navbar, body .my-section5-jumbo > .my-navbar {
       -webkit-box-flex: 0 1 auto;
       -moz-box-flex: 0 1 auto;
       -webkit-flex: 0 1 auto;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto; }
-      body .my-jumbotron > .my-navbar ul li {
-        display: inline-block;
-        padding: 20px 30px; }
-    body .my-jumbotron > .my-inside-content {
+      body .my-jumbotron > .my-navbar ul, body .my-section5-jumbo > .my-navbar ul {
+        padding: 0; }
+        @media screen and (max-width: 576px) {
+          body .my-jumbotron > .my-navbar ul, body .my-section5-jumbo > .my-navbar ul {
+            text-align: center; } }
+        body .my-jumbotron > .my-navbar ul li, body .my-section5-jumbo > .my-navbar ul li {
+          display: inline-block;
+          padding: 20px 30px; }
+          @media screen and (max-width: 576px) {
+            body .my-jumbotron > .my-navbar ul li, body .my-section5-jumbo > .my-navbar ul li {
+              padding: 10px 10px;
+              display: block; } }
+    body .my-jumbotron > .my-inside-content, body .my-section5-jumbo > .my-inside-content {
       -webkit-box-flex: 1 0 auto;
       -moz-box-flex: 1 0 auto;
       -webkit-flex: 1 0 auto;
@@ -98,19 +107,22 @@ body {
       -moz-align-content: center;
       -ms-align-content: center;
       align-content: center; }
-      body .my-jumbotron > .my-inside-content h1, body .my-jumbotron > .my-inside-content h4, body .my-jumbotron > .my-inside-content button {
+      body .my-jumbotron > .my-inside-content h1, body .my-jumbotron > .my-inside-content h4, body .my-jumbotron > .my-inside-content button.my-jumbo-button, body .my-jumbotron > .my-inside-content h2, body .my-section5-jumbo > .my-inside-content h1, body .my-section5-jumbo > .my-inside-content h4, body .my-section5-jumbo > .my-inside-content button.my-jumbo-button, body .my-section5-jumbo > .my-inside-content h2 {
         margin: 10px 0; }
-      body .my-jumbotron > .my-inside-content h5 {
+      body .my-jumbotron > .my-inside-content h5, body .my-section5-jumbo > .my-inside-content h5 {
         text-transform: lowercase; }
-    body .my-jumbotron > .my-contacts {
+      @media screen and (max-width: 576px) {
+        body .my-jumbotron > .my-inside-content h1, body .my-jumbotron > .my-inside-content h2, body .my-jumbotron > .my-inside-content h4, body .my-jumbotron > .my-inside-content h5, body .my-section5-jumbo > .my-inside-content h1, body .my-section5-jumbo > .my-inside-content h2, body .my-section5-jumbo > .my-inside-content h4, body .my-section5-jumbo > .my-inside-content h5 {
+          font-size: smaller; } }
+    body .my-jumbotron > .my-contacts, body .my-section5-jumbo > .my-contacts {
       -webkit-box-flex: 0 1 auto;
       -moz-box-flex: 0 1 auto;
       -webkit-flex: 0 1 auto;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto; }
-      body .my-jumbotron > .my-contacts i {
+      body .my-jumbotron > .my-contacts i, body .my-section5-jumbo > .my-contacts i {
         padding: 20px 15px; }
-    body .my-jumbotron > .my-contacts > i:hover, body .my-jumbotron > .my-navbar > ul > li:hover {
+    body .my-jumbotron > .my-contacts > i:hover, body .my-jumbotron > .my-navbar > ul > li:hover, body .my-section5-jumbo > .my-contacts > i:hover, body .my-section5-jumbo > .my-navbar > ul > li:hover {
       color: #0a6b57;
       cursor: pointer; }
   body .my-section2, body .my-section3 {
@@ -145,7 +157,7 @@ body {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 60px 0; }
+    padding: 40px 0; }
     body .my-section2 .my-section3-text, body .my-section3 .my-section3-text {
       padding-left: 40px; }
       @media screen and (max-width: 576px) {
@@ -238,6 +250,415 @@ body {
         width: 100%;
         height: auto;
         max-height: 350px; }
+  body .my-section4 {
+    -webkit-box-flex: 0 0 100%;
+    -moz-box-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    align-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 40px 0; }
+    body .my-section4 .my-section4-text {
+      -webkit-box-flex: 0 0 35%;
+      -moz-box-flex: 0 0 35%;
+      -webkit-flex: 0 0 35%;
+      -ms-flex: 0 0 35%;
+      flex: 0 0 35%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-content: center;
+      -moz-align-content: center;
+      -ms-align-content: center;
+      align-content: center;
+      padding: 20px 30px; }
+      @media screen and (max-width: 576px) {
+        body .my-section4 .my-section4-text {
+          -webkit-box-flex: 0 0 90%;
+          -moz-box-flex: 0 0 90%;
+          -webkit-flex: 0 0 90%;
+          -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
+          padding: 20px 0; } }
+      body .my-section4 .my-section4-text i {
+        color: #16a085; }
+      body .my-section4 .my-section4-text h5 {
+        padding: 20px 0; }
+      body .my-section4 .my-section4-text p {
+        text-transform: lowercase;
+        font-weight: 100;
+        text-align: center; }
+    body .my-section4 .my-section4-carousel {
+      -webkit-box-flex: 0 0 55%;
+      -moz-box-flex: 0 0 55%;
+      -webkit-flex: 0 0 55%;
+      -ms-flex: 0 0 55%;
+      flex: 0 0 55%;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-content: center;
+      -moz-align-content: center;
+      -ms-align-content: center;
+      align-content: center;
+      -webkit-flex-wrap: nowrap;
+      -moz-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+      @media screen and (max-width: 576px) {
+        body .my-section4 .my-section4-carousel {
+          -webkit-box-flex: 0 0 90%;
+          -moz-box-flex: 0 0 90%;
+          -webkit-flex: 0 0 90%;
+          -ms-flex: 0 0 90%;
+          flex: 0 0 90%; } }
+      body .my-section4 .my-section4-carousel .my-controls {
+        text-align: center; }
+        body .my-section4 .my-section4-carousel .my-controls > a.my-control {
+          display: inline;
+          position: initial;
+          color: black;
+          opacity: 1;
+          background-color: white; }
+          body .my-section4 .my-section4-carousel .my-controls > a.my-control:first-child {
+            padding-right: 10px; }
+      body .my-section4 .my-section4-carousel .my-section4-item {
+        text-align: center; }
+        body .my-section4 .my-section4-carousel .my-section4-item img {
+          height: auto;
+          max-width: 330px;
+          display: inline;
+          padding: 10px; }
+          @media screen and (max-width: 576px) {
+            body .my-section4 .my-section4-carousel .my-section4-item img {
+              max-width: 300px; } }
+  body .my-section5-jumbo {
+    margin: 40px 0;
+    background: url("../images/build/jumbo2.jpg") no-repeat center center; }
+    body .my-section5-jumbo div.my-jumbo2-text {
+      margin: 20px 0; }
+      body .my-section5-jumbo div.my-jumbo2-text > input {
+        text-transform: uppercase; }
+    body .my-section5-jumbo .my-append button {
+      border-radius: 0 2px 2px 0;
+      background-color: #16a085; }
+      body .my-section5-jumbo .my-append button i {
+        border-radius: 0px;
+        color: white; }
+      body .my-section5-jumbo .my-append button:hover {
+        background-color: #0a6b57;
+        cursor: pointer; }
+  body .my-section6 {
+    -webkit-box-flex: 0 0 100%;
+    -moz-box-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    align-items: stretch;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    align-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 40px 0; }
+    body .my-section6 .my-section6-text {
+      -webkit-box-flex: 0 0 40%;
+      -moz-box-flex: 0 0 40%;
+      -webkit-flex: 0 0 40%;
+      -ms-flex: 0 0 40%;
+      flex: 0 0 40%;
+      margin: 0 auto;
+      max-width: 60%;
+      padding-bottom: 30px; }
+      @media screen and (max-width: 576px) {
+        body .my-section6 .my-section6-text {
+          max-width: 90%; } }
+      body .my-section6 .my-section6-text h5, body .my-section6 .my-section6-text p {
+        text-align: center; }
+    body .my-section6 .my-section6-buttons {
+      -webkit-box-flex: 0 0 40%;
+      -moz-box-flex: 0 0 40%;
+      -webkit-flex: 0 0 40%;
+      -ms-flex: 0 0 40%;
+      flex: 0 0 40%; }
+      body .my-section6 .my-section6-buttons > div {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-align-content: center;
+        -moz-align-content: center;
+        -ms-align-content: center;
+        align-content: center;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        @media screen and (max-width: 576px) {
+          body .my-section6 .my-section6-buttons > div {
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            justify-content: center;
+            -ms-flex-pack: center; } }
+        body .my-section6 .my-section6-buttons > div div.my-section6-button {
+          -webkit-box-flex: 0 0 25%;
+          -moz-box-flex: 0 0 25%;
+          -webkit-flex: 0 0 25%;
+          -ms-flex: 0 0 25%;
+          flex: 0 0 25%; }
+          @media screen and (max-width: 576px) {
+            body .my-section6 .my-section6-buttons > div div.my-section6-button {
+              -webkit-box-flex: 0 0 90%;
+              -moz-box-flex: 0 0 90%;
+              -webkit-flex: 0 0 90%;
+              -ms-flex: 0 0 90%;
+              flex: 0 0 90%;
+              padding: 5px; } }
+          body .my-section6 .my-section6-buttons > div div.my-section6-button input {
+            background-color: #16a085;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 0 10px 20px;
+            border: 0; }
+            body .my-section6 .my-section6-buttons > div div.my-section6-button input:hover {
+              background-color: #0a6b57;
+              cursor: pointer; }
+          body .my-section6 .my-section6-buttons > div div.my-section6-button button {
+            background-color: #0a6b57;
+            border-radius: 0 2px 2px 0;
+            padding: 10px 15px; }
+            body .my-section6 .my-section6-buttons > div div.my-section6-button button i {
+              color: white; }
+        body .my-section6 .my-section6-buttons > div div.my-section6-space {
+          -webkit-box-flex: 0 0 2%;
+          -moz-box-flex: 0 0 2%;
+          -webkit-flex: 0 0 2%;
+          -ms-flex: 0 0 2%;
+          flex: 0 0 2%; }
+          @media screen and (max-width: 576px) {
+            body .my-section6 .my-section6-buttons > div div.my-section6-space {
+              -webkit-box-flex: 0 0 0;
+              -moz-box-flex: 0 0 0;
+              -webkit-flex: 0 0 0;
+              -ms-flex: 0 0 0;
+              flex: 0 0 0; } }
+  body .my-section7 {
+    -webkit-box-flex: 0 0 100%;
+    -moz-box-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    align-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    body .my-section7 .my-section7-left {
+      -webkit-box-flex: 0 0 35%;
+      -moz-box-flex: 0 0 35%;
+      -webkit-flex: 0 0 35%;
+      -ms-flex: 0 0 35%;
+      flex: 0 0 35%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      -ms-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-content: center;
+      -moz-align-content: center;
+      -ms-align-content: center;
+      align-content: center;
+      -webkit-flex-wrap: nowrap;
+      -moz-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+      @media screen and (max-width: 576px) {
+        body .my-section7 .my-section7-left {
+          -webkit-box-flex: 0 0 70%;
+          -moz-box-flex: 0 0 70%;
+          -webkit-flex: 0 0 70%;
+          -ms-flex: 0 0 70%;
+          flex: 0 0 70%; } }
+      body .my-section7 .my-section7-left div {
+        -webkit-box-flex: 0 0 40%;
+        -moz-box-flex: 0 0 40%;
+        -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%; }
+        body .my-section7 .my-section7-left div ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 10px 0 0 0; }
+          body .my-section7 .my-section7-left div ul li {
+            padding: 0 10px;
+            float: left;
+            border-right: 2px solid #16a085; }
+            body .my-section7 .my-section7-left div ul li:first-child {
+              padding-left: 0; }
+            body .my-section7 .my-section7-left div ul li:last-child {
+              border: none; }
+            body .my-section7 .my-section7-left div ul li:hover {
+              color: #0a6b57;
+              cursor: pointer; }
+            @media screen and (max-width: 576px) {
+              body .my-section7 .my-section7-left div ul li {
+                font-size: 12px;
+                padding: 0 5px; } }
+      body .my-section7 .my-section7-left div {
+        -webkit-box-flex: 0 0 40%;
+        -moz-box-flex: 0 0 40%;
+        -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%; }
+        body .my-section7 .my-section7-left div p {
+          text-transform: lowercase;
+          font-size: smaller;
+          padding-top: 10px; }
+          body .my-section7 .my-section7-left div p:first-letter {
+            text-transform: uppercase; }
+          @media screen and (max-width: 576px) {
+            body .my-section7 .my-section7-left div p {
+              font-size: 10px; } }
+    body .my-section7 .my-section7-right {
+      -webkit-box-flex: 0 0 35%;
+      -moz-box-flex: 0 0 35%;
+      -webkit-flex: 0 0 35%;
+      -ms-flex: 0 0 35%;
+      flex: 0 0 35%;
+      text-align: right; }
+      @media screen and (max-width: 576px) {
+        body .my-section7 .my-section7-right {
+          -webkit-box-flex: 0 0 20%;
+          -moz-box-flex: 0 0 20%;
+          -webkit-flex: 0 0 20%;
+          -ms-flex: 0 0 20%;
+          flex: 0 0 20%; } }
+      body .my-section7 .my-section7-right i {
+        color: #16a085; }
+        @media screen and (max-width: 576px) {
+          body .my-section7 .my-section7-right i {
+            font-size: 30px; } }
+  body .my-section2, body .my-section4, body .my-section5 {
+    background-color: #f5f6f7; }
 
 .my-jumbo-button {
   text-transform: uppercase;

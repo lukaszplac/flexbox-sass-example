@@ -2,6 +2,7 @@
 @import '../helpers/flex-mixin.scss';
 @import url('https://fonts.googleapis.com/css?family=Prompt:200,300,400');
 $main-color: rgb(22, 160, 133);
+$sub-bg-color: rgb(245, 246, 247);
 $main-color-hover: rgb(10, 107, 87);
 $small-dev: 576px;
 
@@ -19,7 +20,7 @@ body {
 	@include align-items(stretch); //items inside are stretched to fit the container
 	@include justify-content(flex-start); //The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis
 	@include align-content(flex-start); //The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
-	.my-jumbotron {
+	.my-jumbotron, .my-section5-jumbo {
 		@include flex(0 0 100%);
 		@include flexbox();
 		@include flex-direction(column);
@@ -33,9 +34,17 @@ body {
 		>.my-navbar {
 			@include flex(0 1 auto);
 			ul {
+				padding: 0;
+				@media screen and (max-width: $small-dev) {
+					text-align: center;
+				}
 				li {
 					display: inline-block;
 					padding: 20px 30px;
+					@media screen and (max-width: $small-dev) {
+						padding: 10px 10px;
+						display: block;
+					}
 				}
 			}
 		}
@@ -46,11 +55,17 @@ body {
 			@include align-items(center);
 			@include justify-content(center);
 			@include align-content(center);
-			h1, h4, button {
+			h1, h4, button.my-jumbo-button, h2 {
 				margin: 10px 0;
 			}
 			h5 {
 				text-transform: lowercase;
+			}
+
+			h1, h2, h4, h5 {
+				@media screen and (max-width: $small-dev) {
+					font-size: smaller;
+				}
 			}
 		}
 		>.my-contacts {
@@ -75,7 +90,7 @@ body {
 		@include justify-content(center);
 		@include align-content(center);
 		@include flex-wrap(wrap);
-		margin: 60px 0;
+		padding: 40px 0;
 		.my-section3-text {
 			padding-left: 40px;
 			@media screen and (max-width: $small-dev) {
@@ -133,6 +148,250 @@ body {
 			}
 		}
 	}
+
+	.my-section4 {
+		@include flex(0 0 100%);
+		@include flexbox();
+		@include flex-direction(row);
+		@include align-items(flex-start);
+		@include justify-content(center);
+		@include align-content(center);
+		@include flex-wrap(wrap);
+		padding: 40px 0;
+			.my-section4-text {
+				@include flex(0 0 35%);
+				@include flexbox();
+				@include flex-direction(column);
+				@include align-items(center);
+				@include justify-content(center);
+				@include align-content(center);
+				padding: 20px 30px;
+				@media screen and (max-width: $small-dev) {
+					@include flex(0 0 90%);
+					padding: 20px 0;
+				}
+				i {
+					color: $main-color;
+				}
+				h5 {
+					padding: 20px 0;
+				}
+				p {
+					text-transform: lowercase;
+					font-weight: 100;
+					text-align: center;
+				}
+			}
+			.my-section4-carousel {
+				@include flex(0 0 55%);
+				@include flex-direction(column);
+				@include align-items(center);
+				@include justify-content(center);
+				@include align-content(center);
+				@include flex-wrap(nowrap);
+				@media screen and (max-width: $small-dev) {
+					@include flex(0 0 90%);
+				}
+				.my-controls {
+					text-align: center;
+					>a.my-control {
+						display: inline;
+						position: initial;
+						color: black;
+						opacity: 1;
+						background-color: white;
+						&:first-child {
+							padding-right: 10px;
+						}
+					}
+				}
+				.my-section4-item {
+					text-align: center;
+					img {
+						height: auto;
+						max-width: 330px;
+						display: inline;
+						padding: 10px;
+						@media screen and (max-width: $small-dev) {
+							max-width: 300px;
+						}
+					}
+				}
+			}
+	}
+
+	.my-section5-jumbo {
+		margin: 40px 0;
+		background: url('../images/build/jumbo2.jpg') no-repeat center center;
+		div.my-jumbo2-text {
+			margin: 20px 0;
+			>input {
+				text-transform: uppercase;
+			}
+		}
+		.my-append {
+			button {
+				border-radius: 0 2px 2px 0;
+				background-color: $main-color;
+					i {
+						border-radius: 0px;
+						color: white;
+					}
+				&:hover {
+					background-color: $main-color-hover;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.my-section6 {
+		@include flex(0 0 100%);
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(stretch);
+		@include justify-content(center);
+		@include align-content(center);
+		@include flex-wrap(wrap);
+		padding: 40px 0;
+		.my-section6-text {
+			@include flex(0 0 40%);
+			margin: 0 auto;
+			max-width: 60%;
+			padding-bottom: 30px;
+			@media screen and (max-width: $small-dev) {
+				max-width: 90%;
+			}
+			h5, p {
+				text-align: center;
+			}
+		}
+		.my-section6-buttons {
+			@include flex(0 0 40%);
+			>div {
+				@include flexbox();
+				@include flex-direction(row);
+				@include align-items(center);
+				@include justify-content(center);
+				@include align-content(center);
+				@include flex-wrap(wrap);
+				@media screen and (max-width: $small-dev) {
+					@include justify-content(center);
+				}
+				div.my-section6-button {
+					@include flex(0 0 25%);
+					@media screen and (max-width: $small-dev) {
+						@include flex(0 0 90%);
+						padding: 5px;
+					}
+					input {
+						background-color: $main-color;
+						color: white;
+						text-transform: uppercase;
+						padding: 10px 0 10px 20px;
+						border: 0;
+						&:hover {
+							background-color: $main-color-hover;
+							cursor: pointer;
+						}
+					}
+					button {
+						background-color: $main-color-hover;
+						border-radius: 0 2px 2px 0;
+						padding: 10px 15px;
+						i {
+							color: white;
+						}
+					}
+				}
+				div.my-section6-space {
+					@include flex(0 0 2%);
+					@media screen and (max-width: $small-dev) {
+						@include flex(0 0 0);
+					}
+				}
+			}
+		}
+	}
+
+	.my-section7 {
+		@include flex(0 0 100%);
+		@include flexbox();
+		@include flex-direction(row);
+		@include align-items(center);
+		@include justify-content(space-around);
+		@include align-content(center);
+		@include flex-wrap(wrap);
+		.my-section7-left {
+			@include flex(0 0 35%);
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(flex-start);
+			@include justify-content(center);
+			@include align-content(center);
+			@include flex-wrap(nowrap);
+			@media screen and (max-width: $small-dev) {
+				@include flex(0 0 70%);
+			}
+			div {
+				@include flex(0 0 40%);
+					ul {
+						list-style-type: none;
+						margin: 0;
+						padding: 10px 0 0 0;
+						li {
+							padding: 0 10px;
+							float: left;
+							border-right: 2px solid $main-color;
+							&:first-child {
+								padding-left: 0;
+							}
+							&:last-child {
+								border: none;
+							}
+							&:hover {
+								color: $main-color-hover;
+								cursor: pointer;
+							}
+							@media screen and (max-width: $small-dev) {
+								font-size: 12px;
+								padding: 0 5px;
+							}
+						}
+					}
+			}
+			div {
+				@include flex(0 0 40%);
+					p {
+						text-transform: lowercase;
+						font-size: smaller;
+						padding-top: 10px;
+						&:first-letter {
+							text-transform: uppercase;
+						}
+						@media screen and (max-width: $small-dev) {
+							font-size: 10px;
+						}
+					}
+			}
+		}
+		.my-section7-right {
+			@include flex(0 0 35%);
+			@media screen and (max-width: $small-dev) {
+				@include flex(0 0 20%);
+			}
+			text-align: right;
+			i {
+				color: $main-color;
+				@media screen and (max-width: $small-dev) {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	.my-section2, .my-section4, .my-section5 {
+		background-color: $sub-bg-color;
+	}				//changind bg color only for specific sections
 }
 
 .my-jumbo-button {
