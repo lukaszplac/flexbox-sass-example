@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Prompt:200,300,400");
-> * {
+* {
   box-sizing: border-box; }
 
 body {
@@ -29,6 +29,9 @@ body {
   -moz-align-content: flex-start;
   -ms-align-content: flex-start;
   align-content: flex-start; }
+  @media (min-width: 1680px) {
+    body {
+      margin-bottom: 7%; } }
   body .my-jumbotron, body .my-section5-jumbo {
     -webkit-box-flex: 0 0 100%;
     -moz-box-flex: 0 0 100%;
@@ -556,10 +559,10 @@ body {
     -moz-align-content: center;
     -ms-align-content: center;
     align-content: center;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
     body .my-section7 .my-section7-left {
       -webkit-box-flex: 0 0 35%;
       -moz-box-flex: 0 0 35%;

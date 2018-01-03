@@ -5,8 +5,9 @@ $main-color: rgb(22, 160, 133);
 $sub-bg-color: rgb(245, 246, 247);
 $main-color-hover: rgb(10, 107, 87);
 $small-dev: 576px;
+$big-screen: 1680px;
 
->* {
+* {
 	box-sizing: border-box; //include border and padding in total width and height of the all elements
 }
 
@@ -20,6 +21,9 @@ body {
 	@include align-items(stretch); //items inside are stretched to fit the container
 	@include justify-content(flex-start); //The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis
 	@include align-content(flex-start); //The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
+	@media (min-width: $big-screen) {
+		margin-bottom: 7%; //bug with dissapearing footer corrected for big screens
+	}
 	.my-jumbotron, .my-section5-jumbo {
 		@include flex(0 0 100%);
 		@include flexbox();
@@ -322,7 +326,7 @@ body {
 		@include align-items(center);
 		@include justify-content(space-around);
 		@include align-content(center);
-		@include flex-wrap(wrap);
+		@include flex-wrap(nowrap);
 		.my-section7-left {
 			@include flex(0 0 35%);
 			@include flexbox();
