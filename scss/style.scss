@@ -30,6 +30,7 @@ body {
 		background: url('../images/build/jumbo.jpg') no-repeat center center;
 		background-size: cover;
 		height: 100vh;
+		min-height: 100vh; //not working correctly on mozilla without setting min-height
 		color: white;
 		>.my-navbar {
 			@include flex(0 1 auto);

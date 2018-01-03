@@ -60,6 +60,7 @@ body {
     background: url("../images/build/jumbo.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
+    min-height: 100vh;
     color: white; }
     body .my-jumbotron > .my-navbar, body .my-section5-jumbo > .my-navbar {
       -webkit-box-flex: 0 1 auto;
