@@ -373,7 +373,7 @@ body {
           position: initial;
           color: black;
           opacity: 1;
-          background-color: white; }
+          background-color: #f5f6f7; }
           body .my-section4 .my-section4-carousel .my-controls > a.my-control:first-child {
             padding-right: 10px; }
       body .my-section4 .my-section4-carousel .my-section4-item {
